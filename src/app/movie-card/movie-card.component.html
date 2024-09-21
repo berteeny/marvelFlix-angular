@@ -1,0 +1,32 @@
+<nav>
+  <h2>MarvelFlix</h2>
+  <div>
+    <button mat-button color="primary" (click)="goToProfile()">Profile</button>
+    <button mat-button color="primary" (click)="logoutUser()">Logout</button>
+  </div>
+</nav>
+<div class="movies">
+  <mat-card *ngFor="let movie of movies" style="flex: 1 1 auto">
+    <mat-card-header>
+      <mat-card-title>{{ movie.title }}</mat-card-title>
+      <mat-card-subtitle
+        >Directed by: {{ movie.director.name }}</mat-card-subtitle
+      >
+    </mat-card-header>
+    <img src="{{ movie.imagePath }}" alt="{{ movie.title }}" />
+    <mat-card-actions>
+      <button mat-button color="primary" (click)="openGenre(movie)">
+        Genre
+      </button>
+      <button mat-button color="primary" (click)="openDirector(movie)">
+        Director
+      </button>
+      <button mat-button color="primary" (click)="openSynopsis(movie)">
+        Synopsis
+      </button>
+      <mat-icon id="{{ movie._id }}-fav-icon" (click)="toggleFavs(movie)">{{
+        isFav(movie) ? "favorite" : "favorite_border"
+      }}</mat-icon>
+    </mat-card-actions>
+  </mat-card>
+</div>

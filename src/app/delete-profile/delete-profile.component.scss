@@ -1,0 +1,24 @@
+mat-card-actions {
+  justify-content: space-between;
+}
+
+mat-card {
+  padding: 1rem;
+  gap: 1rem;
+}
+
+@media (min-width: 769px) {
+  mat-card {
+    height: 20rem;
+    padding: 2rem;
+    font-size: 1.25rem;
+  }
+
+  mat-card-title {
+    padding: 1rem;
+  }
+
+  mat-card-actions {
+    padding: 3rem;
+  }
+}

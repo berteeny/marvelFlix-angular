@@ -1,0 +1,16 @@
+@media (min-width: 769px) {
+
+mat-card {
+    height: 20rem;
+    padding: 2rem;
+    font-size: 1.25rem
+  }
+  
+  mat-card-title, mat-card-subtitle {
+    padding: 1rem;
+  }
+  
+  mat-card-actions {
+      margin-left: 1.2rem
+  }
+}

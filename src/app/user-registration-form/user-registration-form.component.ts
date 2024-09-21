@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
+import { Router } from '@angular/router';
+
 //closes dialog on success
 import { MatDialogRef } from '@angular/material/dialog';
 
@@ -20,7 +22,8 @@ export class UserRegistrationFormComponent implements OnInit {
   constructor(
     public fetchApiData: FetchApiDataService,
     public dialogRef: MatDialogRef<UserRegistrationFormComponent>,
-    public snackBar: MatSnackBar
+    public snackBar: MatSnackBar,
+    public router: Router
   ) {}
 
   ngOnInit(): void {}
@@ -29,15 +32,15 @@ export class UserRegistrationFormComponent implements OnInit {
   registerUser(): void {
     this.fetchApiData.userRegistration(this.userData).subscribe(
       (result) => {
-        this.dialogRef.close();
-        console.log(result);
-        this.snackBar.open(result, 'Ok', {
+        this.snackBar.open('Please log in', 'Ok', {
           duration: 2000,
         });
+        this.router.navigate(['welcome']);
+        this.dialogRef.close();
       },
       (result) => {
         console.log(result);
-        this.snackBar.open(result, 'Ok', {
+        this.snackBar.open('That username is already taken', 'Ok', {
           duration: 2000,
         });
       }

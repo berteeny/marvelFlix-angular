@@ -1,0 +1,42 @@
+nav {
+  display: flex;
+  gap: 1rem;
+  margin-left: 1rem;
+  justify-content: space-between;
+  margin-right: 1rem;
+  align-items: center;
+}
+
+h2 {
+  color: #83181c;
+}
+
+.movies {
+  display: flex;
+  gap: 1rem;
+  margin: 0rem 1rem;
+  flex-wrap: wrap;
+}
+
+mat-icon {
+  color: #ff0000;
+}
+
+mat-card {
+  padding: 0.5rem;
+  width: 20rem;
+  background-color: #f2ede9;
+  border: solid #e6e1de 0.5px;
+}
+
+mat-card-title {
+  font-weight: 500;
+}
+
+mat-card-subtitle {
+  padding: 1rem 0rem;
+}
+
+h2:hover {
+  cursor: pointer;
+}

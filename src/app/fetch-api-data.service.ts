@@ -35,15 +35,27 @@ export class FetchApiDataService {
   }
 
   //Edit user
-  public editUser(username: string): Observable<any> {
+  // public editUser(username: string): Observable<any> {
+  //   return this.http
+  //     .put(apiUrl + `users/${username}`, {}, {
+  //       headers: new HttpHeaders({
+  //         Authorization: 'Bearer ' + token,
+  //       }),
+  //     })
+  //     .pipe(map(this.extractResponseData), catchError(this.handleError));
+  // }
+
+  //possible but idk
+  public editUser(userData: any): Observable<any> {
     return this.http
-      .put(apiUrl + `users/${username}`, {
+      .put(apiUrl + "users/" + userData.username, userData, {
         headers: new HttpHeaders({
           Authorization: 'Bearer ' + token,
         }),
       })
       .pipe(map(this.extractResponseData), catchError(this.handleError));
   }
+
 
   //Delete user
   public deleteUser(username: string): Observable<any> {
@@ -103,7 +115,7 @@ export class FetchApiDataService {
   //Add a movie to favourite Movies
   public addFavMovies(username: string, movieID: string): Observable<any> {
     return this.http
-      .post(apiUrl + `users/${username}/movies/${movieID}`, {
+      .post(apiUrl + `users/${username}/movies/${movieID}`, movieID, {
         headers: new HttpHeaders({
           Authorization: 'Bearer ' + token,
         }),

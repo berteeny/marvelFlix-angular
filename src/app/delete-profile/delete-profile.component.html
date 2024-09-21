@@ -1,0 +1,16 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Do you wish to delete your user profile?</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-card-subtitle>Once done, this action cannot be reversed.</mat-card-subtitle>
+  </mat-card-content>
+  <mat-card-actions
+    ><button mat-raised-button (click)="closeDialog()" color="primary">
+      Cancel
+    </button>
+    <button mat-raised-button (click)="deleteProfile(username)" color="warn">
+      Delete my profile
+    </button>
+  </mat-card-actions>
+</mat-card>

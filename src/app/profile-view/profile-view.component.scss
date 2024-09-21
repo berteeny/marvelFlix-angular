@@ -1,0 +1,60 @@
+nav {
+  display: flex;
+  gap: 1rem;
+  margin-left: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 1rem;
+}
+
+h2,
+span {
+  color: #83181c;
+}
+
+.movies {
+  display: flex;
+  gap: 1rem;
+  margin: 0rem 1rem;
+  flex-wrap: wrap;
+}
+
+mat-icon {
+  color: #ff0000;
+}
+
+mat-card {
+  padding: 0.5rem;
+  height: 40rem;
+  width: 20rem;
+  background-color: #f2ede9;
+  border: solid #e6e1de 0.5px;
+}
+
+mat-card-title {
+  font-weight: 500;
+}
+
+mat-card-subtitle {
+  padding: 1rem 0rem;
+}
+
+.profile {
+  margin-left: 1rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+span {
+  font-weight: 400;
+}
+
+h2:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .hideButton {
+    display: none;
+  }
+}
