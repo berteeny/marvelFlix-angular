@@ -18,6 +18,8 @@ export class ProfileViewComponent {
   favMovies: any[] = [];
   user: any = localStorage.getItem('user');
   parsedUser: any = JSON.parse(this.user);
+  birthday = new Date(this.parsedUser.birthday);
+  birthdayWithoutTime = this.birthday.toISOString().split('T')[0];
 
   constructor(
     public fetchMovies: FetchApiDataService,
@@ -37,7 +39,6 @@ export class ProfileViewComponent {
       this.favMovies = this.movies.filter(
         (movie) => parsedUser.favMovies.includes(movie._id) === true
       );
-
       return this.favMovies;
     });
   }
@@ -68,6 +69,7 @@ export class ProfileViewComponent {
       .subscribe((result: any) => {
         user.favMovies = result.favMovies;
         localStorage.setItem('user', JSON.stringify(user));
+        window.location.reload();
         return result.favMovies;
       });
   }

@@ -36,14 +36,29 @@
         />
       </mat-form-field>
       <mat-form-field>
+        <mat-label>Birthday</mat-label>
         <input
+          matInput
+          [min]="minDate"
+          [max]="maxDate"
+          [matDatepicker]="picker"
+          [(ngModel)]="userData.birthday"
+          name="Birthday"
+        />
+        <!-- <mat-hint>MM/DD/YYYY</mat-hint> -->
+        <mat-datepicker-toggle
+          matIconSuffix
+          [for]="picker"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        <!-- <input
           matInput
           [(ngModel)]="userData.birthday"
           type="date"
           max="9999-12-31T23:59"
           placeholder="Birthday"
           name="Birthday"
-        />
+        /> -->
       </mat-form-field>
     </form>
   </mat-card-content>
