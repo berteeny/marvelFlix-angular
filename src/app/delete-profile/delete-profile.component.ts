@@ -1,7 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import {
   MatDialogRef,
-  MAT_DIALOG_DATA,
   MatDialog,
 } from '@angular/material/dialog';
 import { Router } from '@angular/router';
@@ -13,6 +12,10 @@ import { FetchApiDataService } from '../fetch-api-data.service';
   templateUrl: './delete-profile.component.html',
   styleUrls: ['./delete-profile.component.scss'],
 })
+
+/**
+ * This class allows users to permanently delete their profile
+ */
 export class DeleteProfileComponent implements OnInit {
   user: any = localStorage.getItem('user');
   parsedUser = JSON.parse(this.user);
@@ -25,12 +28,12 @@ export class DeleteProfileComponent implements OnInit {
     public router: Router
   ) {}
 
-  ngOnInit(): void {
-    // this.deleteProfile(this.username);
-    // console.log(this.username);
-    // console.log(this.user.username);
-  }
+  ngOnInit(): void {}
 
+  /**
+   * This class allows user to permanently delete their profile
+   * @param username
+   */
   deleteProfile(username: string): void {
     this.fetchData.deleteUser(username).subscribe((result: any) => {
       this.username = result;
@@ -38,7 +41,7 @@ export class DeleteProfileComponent implements OnInit {
     });
     this.router.navigate(['welcome']);
     localStorage.removeItem('user');
-    this.closeDialog()
+    this.closeDialog();
   }
 
   closeDialog(): void {

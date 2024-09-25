@@ -9,6 +9,10 @@ import { Router } from '@angular/router';
   templateUrl: './user-login-form.component.html',
   styleUrls: ['./user-login-form.component.scss'],
 })
+
+/**
+ * This class allows an existing user to log in
+ */
 export class UserLoginFormComponent implements OnInit {
   @Input() userData = { username: '', password: '' };
 
@@ -21,7 +25,9 @@ export class UserLoginFormComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  //function that sends form input to backend
+  /**
+   * Allows existing user to log in using their logim info and token
+   */
   loginUser(): void {
     this.fetchApiData.userLogin(this.userData).subscribe(
       (result) => {

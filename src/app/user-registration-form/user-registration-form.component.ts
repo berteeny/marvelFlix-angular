@@ -1,8 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatInputModule } from '@angular/material/input';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatNativeDateModule } from '@angular/material/core';
 
 import { Router } from '@angular/router';
 
@@ -20,6 +16,10 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   templateUrl: './user-registration-form.component.html',
   styleUrls: ['./user-registration-form.component.scss'],
 })
+
+/**
+ * This class allows users to register a new profile
+ */
 export class UserRegistrationFormComponent implements OnInit {
   @Input() userData = { username: '', password: '', email: '', birthday: '' };
 
@@ -40,6 +40,15 @@ export class UserRegistrationFormComponent implements OnInit {
   ngOnInit(): void {}
 
   //function that sends form input to backend
+
+  /**
+   * Allows user to POST new profile to database
+   * @param username
+   * @param password
+   * @param email
+   * @param birthday
+   * @returns snackbar displaying if registration was successful
+   */
   registerUser(): void {
     this.fetchApiData.userRegistration(this.userData).subscribe(
       (result) => {

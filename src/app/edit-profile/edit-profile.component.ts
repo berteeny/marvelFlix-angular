@@ -13,6 +13,10 @@ import { DeleteProfileComponent } from '../delete-profile/delete-profile.compone
   templateUrl: './edit-profile.component.html',
   styleUrls: ['./edit-profile.component.scss'],
 })
+
+/**
+ * This class allows users to edit their profile details
+ */
 export class EditProfileComponent implements OnInit {
   user: any = localStorage.getItem('user');
   parsedUser: any = JSON.parse(this.user);
@@ -39,6 +43,10 @@ export class EditProfileComponent implements OnInit {
 
   ngOnInit(): void {}
 
+   /**
+ * allows user to edit profile details
+ * @param password
+ */
   editProfile(): void {
     this.fetchData.editUser(this.userData).subscribe((result: any) => {
       this.userData = result;
@@ -48,11 +56,17 @@ export class EditProfileComponent implements OnInit {
     });
   }
 
+  /**
+   * opens delete profile dialog
+   */
   deleteProfileOne(): void {
     this.dialog.open(DeleteProfileComponent);
     this.dialogRef.close();
   }
 
+  /**
+   * closes dialog
+   */
   closeDialog(): void {
     this.dialogRef.close();
   }

@@ -43,19 +43,11 @@
           [(ngModel)]="userData.birthday"
           name="Birthday"
         />
-        <!-- <mat-hint>MM/DD/YYYY</mat-hint> -->
         <mat-datepicker-toggle
           matIconSuffix
           [for]="picker"
         ></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
-        <!-- <input
-          matInput
-          [(ngModel)]="userData.birthday"
-          type="date"
-          max="9999-12-31T23:59"
-          name="Birthday"
-        /> -->
       </mat-form-field>
     </form>
   </mat-card-content>

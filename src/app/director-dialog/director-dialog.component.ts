@@ -8,6 +8,11 @@ import { FetchApiDataService } from '../fetch-api-data.service';
   templateUrl: './director-dialog.component.html',
   styleUrls: ['./director-dialog.component.scss'],
 })
+ /**
+ * This class allows user to read info about the director of selected movie
+ * @param directorName
+ */
+
 export class DirectorDialogComponent implements OnInit {
   movie: any;
 

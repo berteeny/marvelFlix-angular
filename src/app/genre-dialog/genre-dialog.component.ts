@@ -8,6 +8,11 @@ import { FetchApiDataService } from '../fetch-api-data.service';
   templateUrl: './genre-dialog.component.html',
   styleUrls: ['./genre-dialog.component.scss'],
 })
+
+ /**
+ * This class allows user to read details about the genre of selected movie
+ * @param genreTitle
+ */
 export class GenreDialogComponent implements OnInit {
   movie: any;
 

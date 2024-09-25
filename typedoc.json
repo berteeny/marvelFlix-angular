@@ -1,0 +1,17 @@
+{
+  // Comments are supported, like tsconfig.json
+  "entryPointStrategy": "expand",
+  "entryPoints": [
+    "src/app/welcome-page/welcome-page.component.ts",
+    "src/app/user-registration-form/user-registration-form.component.ts",
+    "src/app/user-login-form/user-login-form.component.ts",
+    "src/app/synopsis-dialog/synopsis-dialog.component.ts",
+    "src/app/profile-view/profile-view.component.ts",
+    "src/app/movie-card/movie-card.component.ts",
+    "src/app/genre-dialog/genre-dialog.component.ts",
+    "src/app/edit-profile/edit-profile.component.ts",
+    "src/app/director-dialog/director-dialog.component.ts",
+    "src/app/delete-profile/delete-profile.component.ts"
+  ],
+  "out": "docs"
+}

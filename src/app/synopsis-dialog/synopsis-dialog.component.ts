@@ -8,6 +8,10 @@ import { FetchApiDataService } from '../fetch-api-data.service';
   templateUrl: './synopsis-dialog.component.html',
   styleUrls: ['./synopsis-dialog.component.scss'],
 })
+
+/**
+ * This class allows user to read synopsis of selected movie
+ */
 export class SynopsisDialogComponent implements OnInit {
   movie: any;
 
@@ -23,6 +27,10 @@ export class SynopsisDialogComponent implements OnInit {
     this.getSynopsis(this.movie.title);
   }
 
+  /**
+   * allows user to read synopsis of selected movie
+   * @param movieTitle
+   */
   getSynopsis(title: string): void {
     this.fetchSynopsis.getMovie(title).subscribe((result: any) => {
       this.data = result;
