@@ -2,6 +2,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
 
+The API used was created by myself in another project: it is hosted on Render [here](https://movie-api-v2dh.onrender.com/documentation.html) and the repository for that project can be found [here](https://github.com/berteeny/Movie_API).
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
@@ -25,5 +27,4 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-# marvelFlix-angular
-# marvelFlix-angular
+
