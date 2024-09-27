@@ -1,8 +1,11 @@
-# MarvelFlixAngularClient
+# MarvelFlix Angular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
 
-The API used was created by myself in another project: it is hosted on Render [here](https://movie-api-v2dh.onrender.com/documentation.html) and the repository for that project can be found [here](https://github.com/berteeny/Movie_API).
+The API used was created by myself in another project: it is hosted on Render [here](https://movie-api-v2dh.onrender.com/documentation.html) and the repository for that project can be found [here](https://github.com/berteeny/Movie_API) (Note * the API takes an extra few moments to load on first startup, as it is hosted using Render's free version).
+
+## Docs
+Documentation for all classes and methods used can be found in the `docs/` folder.  
 
 ## Development server
 
@@ -16,15 +19,36 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## Dependencies
+    "@angular/animations": "^16.1.0",
+    "@angular/cdk": "^16.2.14",
+    "@angular/common": "^16.1.0",
+    "@angular/compiler": "^16.1.0",
+    "@angular/core": "^16.1.0",
+    "@angular/forms": "^16.1.0",
+    "@angular/material": "^16.2.14",
+    "@angular/platform-browser": "^16.1.0",
+    "@angular/platform-browser-dynamic": "^16.1.0",
+    "@angular/router": "^16.1.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.13.0"
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## devDependencies 
+    "@angular-devkit/build-angular": "^16.1.0",
+    "@angular/cli": "^18.2.5",
+    "@angular/compiler-cli": "^16.1.0",
+    "@types/jasmine": "~4.3.0",
+    "angular-cli-ghpages": "^2.0.1",
+    "jasmine-core": "~4.6.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.2.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.1.0",
+    "typedoc": "^0.26.7",
+    "typescript": "~5.1.3"
 
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-
